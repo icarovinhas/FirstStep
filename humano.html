@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desenvolvimento Humano — FirstStep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">First<span>Step</span></a>
+    <nav id="main-nav">
+      <a href="index.html">Início</a>
+      <a href="ia.html">IA</a>
+      <a href="teste-vocacional.html">Teste Vocacional</a>
+      <a href="carreira.html">Carreira</a>
+      <a href="humano.html" class="active">Des. Humano</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="teste-vocacional.html" class="btn-nav">Fazer o Teste →</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="cat-page-hero blue-bg">
+  <div class="section-tag">Área 2</div>
+  <h2 class="section-title">Desenvolvimento Humano</h2>
+  <p class="section-sub">Crescimento pessoal, emocional e social — autoconhecimento, inteligência emocional e bem-estar.</p>
+</div>
+
+<div class="sub-nav-wrap" id="humanoSub">
+  <div class="sub-nav">
+    <button class="sub-nav-btn active" onclick="showSubCat('humano','all',this)">Todos</button>
+    <button class="sub-nav-btn" onclick="showSubCat('humano','disc',this)">Disciplina</button>
+    <button class="sub-nav-btn" onclick="showSubCat('humano','pes',this)">Desenvolvimento Pessoal</button>
+    <button class="sub-nav-btn" onclick="showSubCat('humano','ment',this)">Mentalidade</button>
+    <button class="sub-nav-btn" onclick="showSubCat('humano','com',this)">Comunicação</button>
+  </div>
+</div>
+
+<div class="container">
+  <div id="humanoContent"></div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom footer-bottom--single">
+      <span>© 2026 FirstStep. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/videos.js"></script>
+<script src="js/navigation.js"></script>
+<script>initHumano();</script>
+</body>
+</html>

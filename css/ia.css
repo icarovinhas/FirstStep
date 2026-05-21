@@ -1,0 +1,84 @@
+.ai-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #163574 60%, #1B4FCC 100%);
+  color: var(--white);
+  padding: 3.5rem clamp(1.2rem,5vw,3rem) 2.5rem;
+}
+.ai-hero-inner { max-width: 1180px; margin: 0 auto; text-align: center; }
+.ai-hero h1 { font-size: clamp(1.8rem,4vw,2.6rem); margin: .75rem 0 .6rem; }
+.ai-hero p { color: rgba(255,255,255,.78); max-width: 620px; margin: 0 auto; line-height: 1.75; }
+
+.ai-chat {
+  margin: -1.5rem auto 3rem;
+  max-width: 860px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.ai-messages {
+  padding: 1.25rem;
+  min-height: 360px;
+  max-height: 56vh;
+  overflow: auto;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7FAFF 100%);
+}
+.ai-row { display: flex; margin: .65rem 0; }
+.ai-row.user { justify-content: flex-end; }
+.ai-row.bot { justify-content: flex-start; }
+.ai-bubble {
+  max-width: 82%;
+  padding: .85rem 1rem;
+  border-radius: 16px;
+  line-height: 1.55;
+  font-size: .95rem;
+  white-space: pre-wrap;
+}
+.ai-row.user .ai-bubble {
+  background: rgba(27,79,204,.10);
+  border: 1px solid rgba(27,79,204,.25);
+  color: var(--navy);
+  border-bottom-right-radius: 6px;
+}
+.ai-row.bot .ai-bubble {
+  background: rgba(11,31,58,.06);
+  border: 1px solid rgba(11,31,58,.12);
+  color: var(--text);
+  border-bottom-left-radius: 6px;
+}
+.ai-meta {
+  font-size: .72rem;
+  color: var(--grey);
+  margin-top: .25rem;
+}
+
+.ai-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .75rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+.ai-input {
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  padding: .85rem 1rem;
+  font-size: .95rem;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.ai-input:focus {
+  border-color: rgba(27,79,204,.55);
+  box-shadow: 0 0 0 4px rgba(91,155,248,.18);
+}
+.ai-hint {
+  padding: 0 1rem 1rem;
+  color: var(--grey);
+  font-size: .85rem;
+}
+@media (max-width: 520px) {
+  .ai-form { grid-template-columns: 1fr; }
+  .ai-bubble { max-width: 100%; }
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teste Vocacional — FirstStep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">First<span>Step</span></a>
+    <nav id="main-nav">
+      <a href="index.html">Início</a>
+      <a href="ia.html">IA</a>
+      <a href="teste-vocacional.html" class="active">Teste Vocacional</a>
+      <a href="carreira.html">Carreira</a>
+      <a href="humano.html">Des. Humano</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="teste-vocacional.html" class="btn-nav">Fazer o Teste →</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="test-hero">
+  <div class="section-tag" style="background:rgba(91,155,248,.2);color:#5B9BF8;">Autoconhecimento</div>
+  <h1>Teste Vocacional</h1>
+  <p>Responda com sinceridade. Não há respostas certas ou erradas — o objetivo é descobrir o que combina mais com você.</p>
+  <div class="test-hero-pills">
+    <div class="info-pill">📋 25 questões</div>
+    <div class="info-pill">⏱ ~5 minutos</div>
+    <div class="info-pill">🎯 Resultado personalizado</div>
+  </div>
+</div>
+
+<div class="test-wrapper">
+  <div class="test-progress" id="testProgress">
+    <div class="progress-top">
+      <span class="progress-label">Seu progresso</span>
+      <span class="progress-count" id="progressCount">1 de 25</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:4%"></div>
+    </div>
+  </div>
+
+  <div id="questionContainer"></div>
+
+  <div class="test-nav" id="testNavBar">
+    <button class="btn btn-outline" id="btnPrev" onclick="prevQuestion()" style="display:none;">← Anterior</button>
+    <span class="test-nav-info" id="testNavInfo">Selecione uma resposta para continuar</span>
+    <button class="btn btn-primary" id="btnNext" onclick="nextQuestion()" style="display:none;">Próxima →</button>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <div class="result-hero-banner">
+      <div class="result-icon" id="resultIcon"></div>
+      <div class="result-badge" id="resultBadge"></div>
+      <h2 id="resultTitle"></h2>
+      <p id="resultDesc"></p>
+    </div>
+
+    <div class="result-scores">
+      <h3>📊 Pontuação por área</h3>
+      <div id="scoreBarsContainer"></div>
+    </div>
+
+    <div class="result-courses">
+      <h3>🎓 Cursos recomendados</h3>
+      <div class="pills-wrap" id="resultCourses"></div>
+    </div>
+
+    <div class="result-jobs">
+      <h3>💼 Profissões indicadas</h3>
+      <div class="pills-wrap" id="resultJobs"></div>
+    </div>
+
+    <div class="retake-row">
+      <button class="btn btn-outline" onclick="retakeTest()">Refazer o Teste</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom footer-bottom--single">
+      <span>© 2026 FirstStep. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/test.js"></script>
+<script src="js/navigation.js"></script>
+<script>initTest();</script>
+</body>
+</html>
